@@ -19,7 +19,7 @@ export default class extends React.Component {
             this.setState({ topRated, popular, airingToday });
         } catch {
             this.setState({
-                error: "Can't find TV information T_T;;;;;;"
+                error: "TV정보를 찾을 수 없습니다."
             });
         } finally {
             this.setState({ loading: false });

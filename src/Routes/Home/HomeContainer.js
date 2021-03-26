@@ -27,7 +27,7 @@ export default class extends React.Component {
           
         } catch {
             this.setState({
-                error: "Can't find movie information @_@;;;;;;"
+                error: "영화 정보를 찾을 수 없습니다."
             });
         } finally {
             this.setState({

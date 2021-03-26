@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
+import Message from "Components/Message";
 
 const Container = styled.div`
     padding: 0px 20px;
 `;
 
 const Form = styled.form`
+    margin-top: 25px;
     margin-bottom: 50px;
     width:100%;
 `;
@@ -17,6 +19,7 @@ const Input = styled.input`
     all: unset;
     font-size: 28px;
     width:100%;
+    text-align: center;
 `;
 
 const SearchPresenter = ({
@@ -30,7 +33,7 @@ const SearchPresenter = ({
 }) => (
     <Container>
         <Form onSubmit={handleSubmit}>
-           <Input placeholder="Search Movies or TV Shows..."
+           <Input placeholder="영화 또는 TV 프로그램을 검색하세요=3"
                   value={searchTerm} 
                   onChange={updateTerm} />
         </Form>
@@ -46,6 +49,11 @@ const SearchPresenter = ({
                         {tvResults.map(show => (<span key={show.id}>{show.name}</span>))}
                     </Section>
                   )} 
+                  {error && <Message color=" #c0392b " text={error} />}
+                  {tvResults && movieResults && 
+                    tvResults.length === 0 && movieResults.length === 0 && (
+                        <Message text= {"해당 검색어를 찾을 수 없습니다"} color="#c0392b"/>
+                        )}
                 </>
               )}
         </Container>
