@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
 import Message from "Components/Message";
@@ -33,6 +34,9 @@ const SearchPresenter = ({
     updateTerm
 }) => (
     <Container>
+        <Helmet>
+        <title>Search | Mingflix</title>
+        </Helmet>
         <Form onSubmit={handleSubmit}>
            <Input placeholder="영화 또는 TV 프로그램을 검색하세요=3"
                   value={searchTerm} 

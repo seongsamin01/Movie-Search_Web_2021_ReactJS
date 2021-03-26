@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Loader from "Components/Loader";
 
 const Container = styled.div`
@@ -58,7 +59,6 @@ const ItemContainer = styled.div`
 
 const Item = styled.span`
     font-size: 18px;
-    opacity: 0.7;
 `;
 
 const Divider = styled.span`
@@ -67,17 +67,27 @@ const Divider = styled.span`
 
 const Overview = styled.p`
     font-size: 18px;
-    opacity: 0.9;
     line-height: 1.8;
     width: 80%;
+    opacity: 0.8;
 `;
 
 
 const DetailPresenter = ({ result, loading, error }) => (
     loading ? (
+      <>
+        <Helmet>
+          <title>Loading | Mingflix</title>
+        </Helmet>
         <Loader />
+      </>
     ) : (
         <Container>
+          <Helmet>
+            <title>
+                {result.original_title ? result.original_title : result.original_name} | Mingflix{" "}
+            </title>  
+          </Helmet>
           <Backdrop
              bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
           />
