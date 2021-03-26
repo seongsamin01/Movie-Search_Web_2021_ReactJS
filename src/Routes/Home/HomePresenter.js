@@ -10,6 +10,7 @@ import Poster from "Components/Poster";
 
 const Container = styled.div`
     padding: 20px;
+    color: #81ecec;
 `;
 
 const HomePresenter = ({ nowPlaying, upcoming, popular, loading, error }) => (

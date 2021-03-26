@@ -8,7 +8,7 @@ const Container = styled.div`
     height: calc(100vh - 50px);
     width: 100%;
     position: relative;
-    padding: 50px;
+    padding: 40px;
 `;
 
 const Backdrop = styled.div`
@@ -40,16 +40,16 @@ const Cover = styled.div`
     background-size: cover;
     height: 100%;
     border-radius: 5px;
+    margin-right: 40px;
 `;
 
 const Data = styled.div`
     width: 70%;
-    margin-left: 10%;
 `;
 
 const Title = styled.h3`
     font-size: 38px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 `;
 
 const ItemContainer = styled.div`
@@ -58,7 +58,7 @@ const ItemContainer = styled.div`
 `;
 
 const Item = styled.span`
-    font-size: 18px;
+    font-size: 15px;
 `;
 
 const Divider = styled.span`
@@ -66,7 +66,7 @@ const Divider = styled.span`
 `;
 
 const Overview = styled.p`
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.8;
     width: 80%;
     opacity: 0.8;

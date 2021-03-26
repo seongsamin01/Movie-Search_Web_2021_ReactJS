@@ -8,7 +8,7 @@ import Message from "Components/Message";
 import Poster from "Components/Poster";
 
 const Container = styled.div`
-    padding: 0px 20px;
+    padding: 20px;
 `;
 
 const Form = styled.form`
@@ -38,7 +38,7 @@ const SearchPresenter = ({
         <title>Search | Mingflix</title>
         </Helmet>
         <Form onSubmit={handleSubmit}>
-           <Input placeholder="영화 또는 TV 프로그램을 검색하세요=3"
+           <Input placeholder="영화 또는 TV 프로그램을 검색하세요=3" 
                   value={searchTerm} 
                   onChange={updateTerm} />
         </Form>
